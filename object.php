@@ -44,7 +44,7 @@ $result = $connection->query($sql);
 // Check for and retrieve the object
 if ($result->num_rows > 0){
 	
-	// Store objects information in $object
+	// Store objects information in $object then get information from array
 	$object = $result->fetch_assoc();
 	//echo '<pre>';
 	//print_r($object);
@@ -66,9 +66,9 @@ if ($result->num_rows > 0){
 
 	<body>
 		<h1><?php echo $object['name']; ?></h1>
-		<p><?php echo $object['cook_time']; ?></p>
-		<p><?php  echo $object['ingredients']; ?></p>
-		<p><?php  echo $object['instructions']; ?></p>
+		<p>Cook Time:&nbsp<?php  echo $object['cook_time']; ?></p>
+		<p>Ingredients:&nbsp<br><?php  echo $object['ingredients']; ?></p>
+		<p>Cooking Instructions:&nbsp<br><?php  echo $object['instructions']; ?></p>
 
 
 	</body>
