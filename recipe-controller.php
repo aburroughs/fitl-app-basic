@@ -1,6 +1,6 @@
 <?php
 
-
+//Retrieve page from URL
 $page = $_REQUEST['page'];
 
 
